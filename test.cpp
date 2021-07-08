@@ -1,30 +1,69 @@
+// #include<iostream>
+// using namespace std;
+
+// class node{
+//   public:
+//   int data;
+//   node *next;
+
+//   node(int value){
+//     data = value;
+//     next = NULL;
+//   }
+// };
+
+// void display(node *head){
+
+//   while(head != NULL){
+//     cout<<head->data<<" ";
+//     head = head->next;
+//   }
+//   cout<<endl;
+// }
+
+// void insert(node *head, int value){
+//   if(head == NULL){
+//     head->data = value;
+//     return;
+//   }
+
+//   node *temp = head;
+//   while(temp->next != NULL){
+//     temp = temp->next;
+//   }
+//   node *n = new node(value);
+//   temp->next = n;
+// }
+
+// int main(){
+//   node *first = new node(12);
+//   for(int i=1; i<10; i++){
+//     insert(first, i);
+//   }
+//   display(first);
+//   display(first);
+//   return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
 #include<iostream>
-#include<vector>
 using namespace std;
 
-bool compare(int a, int b){
-  return a > b;
-}
-
 int main(){
-  vector<int> p;
-  for(int i=0; i<5; i++){
-    int value;
-    cin>> value;
-    p.push_back(value);
-    value = 0;
-  }
+  int a = 50;
+  int *p = &a;
+  int **q = &p;
 
-  for(int i :p){
-    cout<<i<<"   ";
-  }
-  cout<<endl;
-
-  sort(p.begin(), p.end(), compare);    // in decending order
-
-  for(int i :p){
-    cout<<i<<"   ";
-  }
-  cout<<endl;
+  cout<< p<<endl;
+  cout<< **q;
   return 0;
 }
