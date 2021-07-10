@@ -14,10 +14,11 @@
 
 // void display(node *head){
 
-//   while(head != NULL){
-//     cout<<head->data<<" ";
+//   while( head != NULL){
+//     cout<<head->data<<" -> ";
 //     head = head->next;
 //   }
+//   cout<<"NULL";
 //   cout<<endl;
 // }
 
@@ -36,7 +37,8 @@
 // }
 
 // int main(){
-//   node *first = new node(12);
+
+//   node *first = new node(0);
 //   for(int i=1; i<10; i++){
 //     insert(first, i);
 //   }
@@ -55,15 +57,49 @@
 
 
 
-#include<iostream>
-using namespace std;
 
-int main(){
-  int a = 50;
-  int *p = &a;
-  int **q = &p;
 
-  cout<< p<<endl;
-  cout<< **q;
-  return 0;
-}
+// #include<iostream>
+// using namespace std;
+
+// class node{
+//   public:
+//   int data;
+//   node *next;
+//   node(int vale){
+//     data = vale;
+//   }
+//   void display(){
+//     cout<<data<<endl;
+//   }
+// };
+
+// void display(node *head){
+
+//   node *temp = head;
+//   while( temp != NULL){
+//     cout<<temp->data<<" -> ";
+//     temp = temp->next;
+//   }
+//   cout<<"NULL";
+//   cout<<endl;
+// }
+
+// void change(node * b){
+//   b->data = 100;
+// }
+
+// int main(){
+//   node *a = new node(12);
+//   node *b = new node(13);
+//   node *c = new node(14);
+
+//   a->next = b;
+//   b->next = c;
+//   c->next = NULL;
+
+//   // change(a);
+//   display(a);
+//   display(a);
+//   return 0;
+// }
