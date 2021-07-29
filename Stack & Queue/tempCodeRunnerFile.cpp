@@ -1,2 +1,2 @@
-  if(st.empty()) return true;
-  else return false;
+7
+100 80 60 70 60 75 85
