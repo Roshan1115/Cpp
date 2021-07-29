@@ -1,1 +1,2 @@
-  cout<<"Inside second i = "<<i<<" j = "<<j<<" sum = "<<currentSum<<endl;
+5 2
+1 1 0 0 1
