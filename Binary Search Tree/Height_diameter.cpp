@@ -31,7 +31,7 @@ int diameter_not_optimised(Node *root){
   int rDiameter = diameter_not_optimised(root->right);
 
   return max(curDiameter, max(lDiameter, rDiameter));
-}
+} // o(n^2) time
 
 
 int diameter_optimised(Node *root, int *height){
@@ -47,8 +47,8 @@ int diameter_optimised(Node *root, int *height){
   *height = max(lh,rh) + 1;
 
   return max(curDia, max(ldia, rdia));
-
-}
+ 
+} // O (n) time
 
 int main(){
   Node* root = new Node(1);

@@ -1,6 +1,3 @@
-// given a binary tree. travere it with level order
-
-
 #include<iostream>
 #include<queue>
 using namespace std;
@@ -17,6 +14,7 @@ struct Node{
   }
 };
 
+// just too display sequncially
 void traverse_by_level(Node *root){
   if(root == NULL) return;
 
@@ -39,8 +37,24 @@ void traverse_by_level(Node *root){
   }
 }
 
+
+void replace_by_sum(Node *root){
+  if(root == NULL){
+    return;
+  }
+    replace_by_sum(root->left);
+    replace_by_sum(root->right);
+
+  if(root->left != NULL){
+    root->data += root->left->data;
+  }
+  if(root->right != NULL){
+    root->data += root->right->data;
+  }
+}
+
 int main(){
-   Node* root = new Node(1);
+  Node* root = new Node(1);
   root->left = new Node(2);
   root->right = new Node(3);
   root->left->left = new Node(4);
@@ -55,10 +69,18 @@ int main(){
        / \     / \
       4   5   6   7
 
-  */
+ */
 
+  cout<<"Before replacing : ";
   traverse_by_level(root);
   cout<<endl;
+
+  replace_by_sum(root);
+
+  cout<<"After replacing : ";
+  traverse_by_level(root);
+  cout<<endl;
+
 
   return 0;
 }

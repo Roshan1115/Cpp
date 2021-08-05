@@ -1,18 +1,18 @@
 #include<iostream>
 using namespace std;
 
-void call2(int *y){
-  *y += 2;
-}
-
-void call(){
-  int x;
-  x = 23;
-  call2(&x);
-  cout<< x<< endl;
+void call(int *y){
+  static int i = 0;
+  if(i == 3) return;
+  i++;
+  int ano = 0;
+  *y = *y + 2;
+  call(&ano);
+  cout<< ano<<endl;
 }
 
 int main(){
-  call();
+  int x = 10;
+  call(&x);
   return 0;
 }
