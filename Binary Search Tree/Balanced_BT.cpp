@@ -48,7 +48,6 @@ bool isBalanced_optimised(Node *root, int *height){
   if(root == NULL){
     return true;
   }
-
   int lh = 0, rh = 0;
   if(isBalanced_optimised(root->left, &lh) == false){
     return false;
@@ -56,9 +55,7 @@ bool isBalanced_optimised(Node *root, int *height){
   if(isBalanced_optimised(root->right, &rh) == false){
     return false;
   }
-
   *height = max(lh, rh) + 1;
-
   if(abs(lh - rh) <= 1){
     return true;
   }
