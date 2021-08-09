@@ -26,7 +26,7 @@ int maxSum_utility(Node *root, int &ans){
 
   int nodeMax = max(max(root->data, root->data + left + right), max(root->data + left, root->data + right));
 
-  ans =  nodeMax;
+  ans =  max(ans, nodeMax);
 
   int singlePathsum = max(root->data, max(root->data + left, root->data + right));
   return singlePathsum;;
@@ -53,7 +53,7 @@ int main(){
 
 // uncomment these lines to add two nodes to the left of tree
  root->left->left->left = new Node(8);
- root->left->left->left->left = new Node(9);
+ root->left->left->left->left = new Node(-34);
 
 
   /*
@@ -65,7 +65,7 @@ int main(){
      /
     8
    /
-  9
+ -34
   
  */
 
