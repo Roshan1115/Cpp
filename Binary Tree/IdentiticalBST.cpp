@@ -13,6 +13,14 @@ struct Node{
     right = NULL;
   }
 };
+void inorder_traverse(Node* root){
+  if(root == NULL) return;
+
+  inorder_traverse(root->left);
+  cout<<root->data<<" ";
+  inorder_traverse(root->right);
+
+}
 
 Node * insert(Node *root, int val){
   if(root == NULL){
