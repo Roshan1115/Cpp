@@ -1,5 +1,5 @@
 // set contains unique elements
-// element are in sorted ordder
+// element are in sorted order
 // acess of i'th element randomly is not possbile in O(1) or O(log n) time
 // included in <set> header file
 // set is defined using balancced bst
