@@ -1,5 +1,5 @@
 /*
-given an array and two integer k and x. find the sum of a subarray of size k having sum less than x.
+given an array and two integer k and x. find the maximum sum of a subarray of size k having sum less than x.
 */
 
 #include<iostream>

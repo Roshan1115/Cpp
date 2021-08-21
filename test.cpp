@@ -1,8 +1,9 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
 
 int main(){
-  int arr[3] = {10, 20, 30};
-  cout<< *(arr + 3) <<endl;
+  int x = (int)pow(10, 2);
+  cout<< x<< endl;
   return 0;
 }
