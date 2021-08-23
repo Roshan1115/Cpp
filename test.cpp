@@ -1,9 +1,13 @@
 #include<iostream>
-#include<math.h>
+#include<vector>
 using namespace std;
 
 int main(){
-  int x = (int)pow(10, 2);
-  cout<< x<< endl;
+  vector<int> v(3);
+
+  for(int i=0; i<3; i++){
+    v.push_back(i*10);
+  }
+  cout<< v.back()<< endl;
   return 0;
 }

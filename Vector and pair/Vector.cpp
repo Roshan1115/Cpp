@@ -62,5 +62,10 @@ int main(){
     cout<< i<<" ";
   }
   cout<<endl;
+
+  vector<int> newV = {1,2,3,4};
+  for(auto i : newV){
+    cout<< i<<" ";
+  }cout<< endl;
   return 0;
 }
