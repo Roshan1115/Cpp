@@ -1,13 +1,11 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 int main(){
-  vector<int> v(3);
-
-  for(int i=0; i<3; i++){
-    v.push_back(i*10);
-  }
-  cout<< v.back()<< endl;
+  vector<int> v1 = {10,23,45,2};
+  make_heap(v1.begin(), v1.end());
+  cout<< v1.front()<<endl;
   return 0;
 }
