@@ -5,10 +5,10 @@ Given integer k arrays, merge them.
 #include<iostream>
 #include<vector>
 #include<queue>
-// #include<Pair>
+#include<algorithm>
 using namespace std;
 
-
+#define vi vector<int>
 #define pii pair<int, int>
 #define rep(i,a,b) for(int i=a; i<b; i++)
 
