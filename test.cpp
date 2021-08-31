@@ -1,17 +1,26 @@
 #include<iostream>
 #include<vector>
+#include<map>
+#include<unordered_map>
+#include<stack>
+#include<queue>
+#include<algorithm>
 using namespace std;
 
+#define vi vector<int>
+#define vii vector<pair<int, int> >
+#define pii pair<int, int>
+#define rep(i,a,b) for(int i=a; i<b; i++)
+
 int main(){
-  vector<int> v(3);
+  map<int, int> m;
 
-  for(auto &i : v)
-    cin>> i;
+  cout<< m.size()<< endl;
 
-  for(auto &i : v)
-    cout<<  i;
+  for(int i=1; i<5; i++)
+    cout<< m[i]<<" ";
   cout<< endl;
-  
 
+  cout<< m.size()<< endl;
   return 0;
 }
