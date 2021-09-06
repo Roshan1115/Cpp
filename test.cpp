@@ -17,9 +17,7 @@ int main(){
 
   cout<< m.size()<< endl;
 
-  for(int i=1; i<5; i++)
-    cout<< m[i]<<" ";
-  cout<< endl;
+  m[1];
 
   cout<< m.size()<< endl;
   return 0;
