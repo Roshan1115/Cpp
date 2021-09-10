@@ -12,32 +12,21 @@ using namespace std;
 #define pii pair<int, int>
 #define rep(i,a,b) for(int i=a; i<b; i++)
 
-
-void forEach(vi &v, void(* lam)(int) ){
-  rep(i,0,v.size()){
-    lam(v[i]);
-  }
-}
-
-void fun(int n){
-  cout<< n<< endl;
-}
-
 int main(){
+  int n = 4;
+  vi v;
 
-  // cout<< v.begin() << endl;
+  rep(i,0,n)
+    cin >> v[i];
 
-  vi v = {1,2,3,4,5,6,7};
-  int a= 444;
+  v.pop_back();
+  cout<< v.size() << endl;
+  // v.pop_back();
 
-  vi :: iterator it;
-  for(it = v.begin(); it != v.end(); it++)
-    cout<< *it <<" ";
-  cout<< endl;
-
-  forEach(v, fun);
-  cout<< endl;
-  
+  while(!v.empty()){
+    cout<< v.back()<<" ";
+    v.pop_back();
+  }
   return 0;
 }
 
