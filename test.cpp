@@ -13,20 +13,12 @@ using namespace std;
 #define rep(i,a,b) for(int i=a; i<b; i++)
 
 int main(){
-  int n = 4;
-  vi v;
+  vi a(4);
+  a.push_back(23);
 
-  rep(i,0,n)
-    cin >> v[i];
-
-  v.pop_back();
-  cout<< v.size() << endl;
-  // v.pop_back();
-
-  while(!v.empty()){
-    cout<< v.back()<<" ";
-    v.pop_back();
-  }
+  for(int x : a)
+    cout<< x<<" ";
+  cout<< endl;
   return 0;
 }
 
