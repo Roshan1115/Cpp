@@ -45,8 +45,8 @@ void MaxHeap :: shiftup(int index){
   int pi = parent(index);
   if(vect[index] > vect[pi]){
     swap(vect[index], vect[pi]);
+    shiftup(pi);
   }
-  shiftup(pi);
 }
 
 void MaxHeap :: shiftdown(int index){
