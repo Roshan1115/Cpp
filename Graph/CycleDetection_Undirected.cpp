@@ -12,44 +12,46 @@ using namespace std;
 #define pii pair<int, int>
 #define rep(i,a,b) for(int i=a; i<b; i++)
 
-const int N = 1e5;
-vector<bool> visited(N, false);
-vector< vi > adj(N);
 
 
-void DFS(int node){
 
-  // preorder
-  visited[node] = true;
-  cout<< node <<" ";
+bool isCycle(int src, vector< vi> &adj, vector<bool> &visited, int parent){
+  visited[src] = true;
+  for(int i : adj[src]){
+    if(i != parent){
+      if(visited[i])
+        return true;
 
-  //inorder
-  vi :: iterator it;
-  for(it = adj[node].begin(); it != adj[node].end(); it++)
-  {
-    if(visited[*it]) ;  // do nothing
-    else{
-      DFS(*it);
+      if(isCycle(i,adj,visited,src)){
+        return true;
+      }
     }
-  }
 
-  // postorder
+  }
+  return false;
 }
 
 int main(){
   int node, edge;
   cin >> node >> edge;
+  vector< vi > adj(node+1);
 
   rep(i,0,edge){
     int x,y;
     cin >> x >> y;
 
-    // since it is undirected edge (two way edge)
+    // x --> y and y --> x
     adj[x].push_back(y);
     adj[y].push_back(x);
   }
 
-  DFS(1);
+  bool cycle = false;
+  vector<bool> visited(node+1, false);
+
+  cycle = isCycle(1,adj,visited,-1);
+
+  if(cycle) cout<<"There is a cycle.\n";
+  else cout<<"There is no cycle.\n";
   return 0;
 }
 
@@ -66,7 +68,7 @@ input
 3 7
 2 7
 
-output : 1 2 4 5 6 7 3
+
 */
 
 /*
