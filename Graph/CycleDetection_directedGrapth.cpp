@@ -53,6 +53,7 @@ int main(){
   rep(i,1,vertices+1){
     if(!visited[i] && isCycle(i,adj_list,visited,stackk)){
       cycle = true;
+      break;
     }
   }
 
