@@ -1,4 +1,4 @@
-// this problem is based using DSU
+// this problem is based using DSU and used for MST
 
 #include<iostream>
 #include<vector>

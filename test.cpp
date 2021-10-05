@@ -1,30 +1,15 @@
 #include<iostream>
-#include<vector>
-#include<map>
-#include<unordered_map>
-#include<stack>
-#include<queue>
-#include<algorithm>
 using namespace std;
 
-#define vi vector<int>
-#define vii vector<pair<int, int> >
-#define pii pair<int, int>
-#define rep(i,a,b) for(int i=a; i<b; i++)
+int give(int a){
+  if(a == 1)
+    return 100;
+  int p;
+  return p = give(a-1);
+}
 
 int main(){
-  vector< vi > v;
-
-  rep(i,0,4) {
-    v.push_back({i, i+10, i+20});
-  }
-
-  for(auto i : v){
-    for(auto j : i){
-      cout<< j <<" ";
-    }
-    cout<< endl;
-  }
+  cout<< give(3) << endl;
   return 0;
 }
 
