@@ -37,7 +37,7 @@ int CoinChangeTebulation(vi &a, int n, int x) {
   vector<vi> dp(n+1, vi(x+1, 0));
   dp[0][0] = 1;
 
-  rep(i,0,n+1){
+  rep(i,1,n+1){
     rep(j,0,x+1){
       if(j-a[i-1] >= 0)
         dp[i][j] += dp[i][j-a[i-1]];
@@ -68,7 +68,7 @@ int main(){
 
   cout<< CoinChange(a,n,x) << endl;   // memorization technique
 
-  // cout << CoinChangeTebulation(a,n,x) << endl;    // tabulation
+  cout << CoinChangeTebulation(a,n,x) << endl;    // tabulation
   return 0;
 }
 
