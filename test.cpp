@@ -1,15 +1,19 @@
 #include<iostream>
 using namespace std;
 
-int give(int a){
-  if(a == 1)
-    return 100;
-  int p;
-  return p = give(a-1);
+void find(){
+  cout<<"hello\n";
+  
+  int *x = new int(4);
+
+  cout<< *x << endl;
 }
 
 int main(){
-  cout<< give(3) << endl;
+  
+  find();
+
+  cout<< *x << endl;
   return 0;
 }
 
