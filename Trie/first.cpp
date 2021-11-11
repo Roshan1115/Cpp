@@ -25,7 +25,7 @@ public:
   public:
     bool end;
     node* next[26];
-    node(){
+    (){
       end = false;
       for(int i=0; i<26; i++)
         next[i] = NULL;
@@ -33,7 +33,7 @@ public:
   };
 
   node* trie;
-  Trie(){
+  Trie(){node
     trie = new node();
   }
 

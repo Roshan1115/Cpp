@@ -1,19 +1,31 @@
 #include<iostream>
+#include<vector>
+#include<map>
+#include<unordered_map>
+#include<stack>
+#include<queue>
+#include<algorithm>
+#include<set>
+#include<limits>
 using namespace std;
 
-void find(){
-  cout<<"hello\n";
-  
-  int *x = new int(4);
+#define endline cout<<endl
+#define vi vector<int>
+#define vii vector<pair<int, int> >
+#define pii pair<int, int>
+#define rep(i,a,b) for(int i=a; i<b; i++)
 
-  cout<< *x << endl;
-}
+class say{
+  public:
+  say(){
+    cout<<"Constructor.\n";
+  }
+};
 
 int main(){
-  
-  find();
+  say s;
+  say *p = new say();
 
-  cout<< *x << endl;
   return 0;
 }
 
