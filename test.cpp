@@ -15,17 +15,12 @@ using namespace std;
 #define pii pair<int, int>
 #define rep(i,a,b) for(int i=a; i<b; i++)
 
-class say{
-  public:
-  say(){
-    cout<<"Constructor.\n";
-  }
-};
-
 int main(){
-  say s;
-  say *p = new say();
-
+  string s = "ros";
+  int i = 2;
+  char ch = 'a' + i;
+  string c = s + ch;
+  cout<< c;endline;
   return 0;
 }
 
