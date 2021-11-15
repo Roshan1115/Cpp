@@ -1,26 +1,9 @@
 #include<iostream>
-#include<vector>
-#include<map>
-#include<unordered_map>
-#include<stack>
-#include<queue>
-#include<algorithm>
-#include<set>
-#include<limits>
 using namespace std;
 
-#define endline cout<<endl
-#define vi vector<int>
-#define vii vector<pair<int, int> >
-#define pii pair<int, int>
-#define rep(i,a,b) for(int i=a; i<b; i++)
-
 int main(){
-  string s = "ros";
-  int i = 2;
-  char ch = 'a' + i;
-  string c = s + ch;
-  cout<< c;endline;
+  int n[3] = {2,3,4};
+  cout<<(num[0]<<num[2]);
   return 0;
 }
 
