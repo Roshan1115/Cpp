@@ -2,9 +2,10 @@
 using namespace std;
 
 int main(){
-  int n[3] = {2,3,4};
-  cout<<(num[0]<<num[2]);
+  int a = 9;
+
+  cout<< (a << 1); cout<< endl;
   return 0;
-}
+  }
 
 // use : g++ -std=c++11 
