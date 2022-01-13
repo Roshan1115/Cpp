@@ -26,6 +26,7 @@ using namespace std;
 const int N = 1e5+2;
 int a[N], tree[4*N];
 
+
 void build(int node, int start, int end){
   if(start == end){
     tree[node] = a[start];  return;
@@ -37,6 +38,26 @@ void build(int node, int start, int end){
   tree[node] = tree[2*node] + tree[2*node+1];
 }
 
+
+// l to r is the range
+int querry(int node, int start, int end, int l, int r) {
+  if(start > r || end < l) {
+    return 0;
+  }
+  else if(start >= l && end <= r) {
+    return tree[node];
+  }
+  
+  int mid = (start + end)/2;
+
+  int q1 = querry(2*node, start, mid, l, r);
+  int q2 = querry(2*node+1, mid+1, end, l,r);
+
+  return q1 + q2;
+}
+
+
+
 int main(){
   int n; cin >> n;
   rep(i,0,n)
@@ -46,6 +67,21 @@ int main(){
 
   rep(i,1,15)
     cout<<tree[i]<<" "; endline;
+
+  while(1){
+    int type;
+    cout<<"Enter type. 1 for querry, -1 for exiting.\n";
+    cin>>type;
+    if(type == -1)
+      break;
+    if(type == 1){
+      int l,r;
+      cout<<"Enter range. 2 digits spaced less then "<<n<<endl;
+      cin>> l >> r;
+      int ans = querry(1, 0, n-1, l, r);
+      cout<< ans<<endl;
+    }
+  }
   return 0;
 }
 
@@ -56,6 +92,16 @@ int main(){
 input 
 8
 5 3 2 4 1 8 6 10
+1
+1 5
+-1
 
-output : 39 14 25 8 6 9 16 5 3 2 4 1 8 6
+
+output
+
+39 14 25 8 6 9 16 5 3 2 4 1 8 6 
+Enter type. 1 for querry, -1 for exiting.
+Enter range. 2 digits spaced less then 8
+18
+Enter type. 1 for querry, -1 for exiting.
 */
