@@ -23,7 +23,7 @@ using namespace std;
 #define pii pair<int, int>
 #define rep(i,a,b) for(int i=a; i<b; i++)
 
-const int N = 1e5+2;
+const int N = 1e7+2;
 int a[N], tree[4*N];
 
 
@@ -33,7 +33,7 @@ void build(int node, int start, int end){
   }
   int mid = (start+end)/2;
   build(2*node, start, mid);
-  build(2*node+1, mid+1, end);
+  build(2*node+1, mid+1, end);.p
 
   tree[node] = tree[2*node] + tree[2*node+1];
 }
